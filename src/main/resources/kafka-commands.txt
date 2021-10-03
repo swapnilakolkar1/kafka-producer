@@ -1,0 +1,14 @@
+kafka commands 
+
+zookeeper-server-start.bat P:\Kafka\kafka_2.13-2.8.0\config\zookeeper.properties
+
+kafka-server-start.bat P:\Kafka\kafka_2.13-2.8.0\config\server.properties
+
+Create topic
+kafka-topics --bootstrap-server localhost:9092 --create --topic topic-book --replication-factor 1 --partitions 3
+
+describe topic
+kafka-topics --bootstrap-server localhost:9092 --describe --topic topic-book
+
+consumer console
+kafka-console-consumer --bootstrap-server 127.0.0.1:9092 --topic topic-book
